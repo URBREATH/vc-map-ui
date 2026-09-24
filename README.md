@@ -1,168 +1,195 @@
 # VC Map
 
-VC Map is an Open-Source JavaScript framework and API for building dynamic and interactive maps on the web. It can display
-2D data, oblique imagery and massive 3D data including terrain data, vector data, mesh models, and point clouds making it
-easy for users to explore and interact with the data in an integrated and high-performance map application. VC Map apps can
-be rendered in all modern web browsers and on both desktop and mobile devices, bringing the map to where the user is.
-VC Map is built upon open, proven, and reliable GIS and web technologies such as [OpenLayers](https://github.com/openlayers/openlayers)
-and [Cesium](https://github.com/cesiumGS/cesium/) for the visualization of 2D and 3D geo-data. It can load and display data
-from various sources and in different formats including open OGC standards and interfaces. Users can easily switch between
-the 2D, oblique and 3D views and dynamically add map layers to the scene that are accessible in all views. The VC Map
-framework offers ready-to-use map tools and widgets that can be flexibly combined in a VC Map app to meet the needs and demands of end-users and the target audience. Examples are navigation controls, map layers and legends, drawing and editing tools, split screens, camera flights, and GIS tools such as measurements, height profiles, view shed analysis, or real-time shadows.
-VC Map provides a strong programming API for developers that makes it easy to build customized VC Map applications,
-to integrate VC Maps into any web page and to extend its functionalities with own plugins. The VC Map framework and API
-is structured into the following four main architectural layers:
+**Provided by:** [Virtual City Systems](https://vc.systems)
 
-#### [VC Map Core](https://github.com/virtualcitySYSTEMS/map-core)
+## Description
 
-The VC Map Core is a thin abstraction layer and wrapper around OpenLayers and Cesium. It provides a common data and feature
-management API and automatically synchronizes data and user actions between the 2D, oblique and 3D views. Map functions and
-tools can be developed against this Core API to make them available in 2D, 3D and the oblique view rather than having to
-develop them redundantly and based on different technologies.
+VC Map is an open-source JavaScript framework and API for building dynamic, interactive web maps. It displays 2D data, oblique imagery, and large 3D datasets, including terrain, vector data, mesh models, and point clouds. Users can switch between 2D, oblique, and 3D views and add map layers that are accessible across views.
 
-#### Configuration Management
+Built on GIS and web technologies such as [OpenLayers](https://github.com/openlayers/openlayers) and [Cesium](https://github.com/cesiumGS/cesium/), VC Map supports data from multiple sources and formats, including open OGC standards and interfaces. It provides ready-to-use tools and widgets, and an API for building custom applications, embedding maps in web pages, and extending functionality with plugins.
 
-The VC Map framework offers a flexible and fully customizable map configuration management. All contents of a VC Map application
-such as available layers, views, tools, and plugins are managed in a JSON-based configuration file that is loaded when starting
-the application. Every VC Map application can thus be easily configured according to the end-user needs. Map configurations can
-be dynamically changed, extended, and serialized at runtime through a corresponding API.
+VC Map applications can run in modern web browsers on desktop and mobile devices.
 
-#### Modern User Interface
+## Images
 
-VC Map comes with a modern UI interface for VC Map applications that provides UI components for all map tools and widgets
-implemented based on Vue.js and HTML5. In addition, the VC Map framework provides pre-built, low-level UI elements that can
-be used by developers to easily build more complex user dialogs from and include them in a map application.
+![VC Map component diagram](./documentation/VC_Map_Diagram.png)
 
-#### [Plugin API](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
+## Installation Prerequisites
 
-VC Map is easy to customize and extend through a well-defined Plugin API. Plugins allow for adding new functionalities,
-tools, and user dialogs to a VC Map application. Plugins can be added to a VC Map through the configuration file or loaded
-dynamically to an existing map application using the Plugin API. Plugin developers can use the entire VC Map stack
-(VC Map Core, configuration management, UI components) for building their own extensions.
+- Node.js and npm. The provided documentation does not specify minimum versions.
+- A modern web browser to run the application.
 
-# Components
+## Installation Instructions
 
-### [@vcmap/core](https://github.com/virtualcitySYSTEMS/map-core)
+1. Clone the [VC Map UI repository](https://github.com/virtualcitySYSTEMS/map-ui).
+2. Navigate to the repository directory and install dependencies:
 
-Provides an abstraction layer around 2D, 3D and oblique Maps. Provides the following components:
+   ```bash
+   npm install
+   ```
 
-- map abstraction for Cesium, Openlayers and Oblique Images
-- layers
-- interactions
-- styles
-- application and module/config handling
+3. Start the development server:
 
-### [@vcmap/ui](https://github.com/virtualcitySYSTEMS/map-ui)
+   ```bash
+   npm run start
+   ```
 
-This Project, provides
+4. Open [http://localhost:8080](http://localhost:8080) in a browser.
 
-- a configurable and extendable ui
-- extends the @vcmap/core application handling with a plugin Concept, see [@vcmap/plugin-cli](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
-- extends the @vcmap/core application with a windowManager
+## Built Image Registry
 
-### [@vcmap/plugin-cli](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
+Not specified in the provided documentation.
 
-Provides a tool to create, develop and build Plugins for the @vcmap/ui.
-Plugin Concept documentation can also be found there.
+## License
 
-### [@vcmap/ui webpack5 integration template](https://github.com/virtualcitySYSTEMS/map-ui-webpack5-example)
+This project is licensed under the MIT License.
 
-Example Template to show how to integrate the @vcmap/ui in a webpack5 project.
+Copyright (c) 2022 virtualcitySYSTEMS
 
-### [@vcmap/core demo](https://github.com/virtualcitySYSTEMS/map-core-demo)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Example demo Application based on the @vcmap/core, shows how to implement a different UI on top of the @vcmap/core
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-## Component Diagram
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-![A schema on component interactions](./documentation/VC_Map_Diagram.png)
+## External technical resources
 
-# Project and Components
+- [VC Map Core (`@vcmap/core`)](https://github.com/virtualcitySYSTEMS/map-core)
+- [VC Map UI (`@vcmap/ui`)](https://github.com/virtualcitySYSTEMS/map-ui)
+- [VC Map Plugin CLI (`@vcmap/plugin-cli`)](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
+- [VC Map UI webpack 5 integration template](https://github.com/virtualcitySYSTEMS/map-ui-webpack5-example)
+- [VC Map Core demo](https://github.com/virtualcitySYSTEMS/map-core-demo)
+- [OpenLayers](https://github.com/openlayers/openlayers)
+- [Cesium](https://github.com/cesiumGS/cesium/)
 
-- contentTree API [CONTENT_TREE](documentation/CONTENT_TREE.md)
-- windowManager API [WINDOWS](documentation/WINDOWS.md)
-- Navbar/ButtonManager/ToolboxManager [BUTTONS](documentation/BUTTONS.md)/[TOOLBOX](documentation/TOOLBOX.md)
-- OrientationTools
-- ActionConcept [ACTIONS](documentation/ACTIONS.md)
-- PluginConcept [Plugin API](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
-- SEARCH API [SEARCH](documentation/SEARCH.md)
-- I18n API [INTERNATIONALIZATION](documentation/INTERNATIONALIZATION.md).
-- CATEGORIES API [CATEGORIES](documentation/CATEGORIES.md).
-- Context Menu API [CONTEXT_MENU](documentation/CONTEXT_MENU.md)
-- FeatureInfo [FEATURE_INFO](documentation/FEATURE_INFO.md)
-- [State & Application Link](documentation/STATE.md)
-- [Help Concept](documentation/HELP.md)
-- Copyright [ATTRIBUTIONS](documentation/ATTRIBUTIONS.md)
+## User Guide References
 
-# Project Release Cycle and Version Management
+- [Getting started](documentation/GET_STARTED.md)
+- [Plugin CLI documentation](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
+- [API Story documentation](https://lib.virtualcitymap.de/ui/6.0/story/)
 
-### Major Version Releases:
+## Additional Information
 
-We plan to release new major versions on an annual basis, and these releases may include breaking changes.
-Additionally, each major release will incorporate the latest versions of Cesium and Openlayers.
+### Architecture
 
-### Patches and Minor Releases:
+VC Map consists of four main architectural layers:
 
-Patches and minor releases will be issued approximately every two months. This may involve releasing minor versions of
-OpenLayers and introducing new Cesium versions, provided there are no breaking changes in the Cesium version.
-Plugins designed for a major version should seamlessly function with any new minor or patch version of VC Map.
+- **VC Map Core:** A thin abstraction layer and wrapper around OpenLayers and Cesium. It provides common data and feature management and synchronizes data and user actions between 2D, oblique, and 3D views.
+- **Configuration Management:** A flexible system for managing application content—such as layers, views, tools, and plugins—in JSON configuration files. Configurations can be changed, extended, and serialized at runtime through an API.
+- **Modern User Interface:** UI components for map tools and widgets, implemented with Vue.js and HTML5, plus lower-level elements developers can use to build custom dialogs.
+- **Plugin API:** An API for adding tools, functionality, and user dialogs. Plugins can be configured in an application or loaded dynamically, and can use the VC Map Core, configuration management, and UI components.
 
-### Bugfix Support:
+### Components
 
-We will offer bugfix support for the current major version and the one preceding it.
+#### [`@vcmap/core`](https://github.com/virtualcitySYSTEMS/map-core)
 
-# Roadmap / Future Development
+Provides an abstraction layer for 2D, 3D, and oblique maps, including:
 
-### Core
+- Map abstractions for Cesium, OpenLayers, and oblique imagery.
+- Layers.
+- Interactions.
+- Styles.
+- Application, module, and configuration handling.
 
-- Clustering Prio 4
-- Style Refactoring Prio 4
+#### [`@vcmap/ui`](https://github.com/virtualcitySYSTEMS/map-ui)
 
-### Ui
+Provides a configurable and extendable user interface. It extends the `@vcmap/core` application handling with a plugin concept and a `windowManager`.
 
-- Overlay API Support
+#### [`@vcmap/plugin-cli`](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
 
-# Plugins
+Provides tools to create, develop, and build plugins for `@vcmap/ui`. It also documents the plugin concept.
 
-[Drawing](https://github.com/virtualcitySYSTEMS/map-draw)
-[Print](https://github.com/virtualcitySYSTEMS/map-print)
-[Export](https://github.com/virtualcitySYSTEMS/map-export)
-[Swipe Tool](https://github.com/virtualcitySYSTEMS/map-swipe-tool)
-[Shadow](https://github.com/virtualcitySYSTEMS/map-shadow)
-[Create Link](https://github.com/virtualcitySYSTEMS/map-createLink)
-[Search Nominatim](https://github.com/virtualcitySYSTEMS/map-search-nominatim)
-[Cesium Filters](https://github.com/virtualcitySYSTEMS/map-cesium-filters)
-[MultiView](https://github.com/virtualcitySYSTEMS/map-multi-view)
+#### Additional examples
 
-### Plugins in Development
+- [Webpack 5 integration template for `@vcmap/ui`](https://github.com/virtualcitySYSTEMS/map-ui-webpack5-example) — example integration in a webpack 5 project.
+- [Demo application for `@vcmap/core`](https://github.com/virtualcitySYSTEMS/map-core-demo) — demonstrates implementing a different UI on top of the core.
 
-|       Plugin       | Dev Prio | Proj Prio |
-| :----------------: | :------: | :-------: |
-|    Measurement     |    1     |     1     |
-|      Planning      |    1     |     1     |
-|   HeightProfile    |    4     |     2     |
-|       Flight       |    4     |     2     |
-|      ViewShed      |    4     |     2     |
-| TransparentTerrain |    4     |     3     |
-|      Walkmode      |    4     |     3     |
-|    ClippingTool    |    4     |     3     |
-|  AttributeEditor   |    4     |     3     |
-|       Query        |    4     |     3     |
-|      Locator       |    4     |     4     |
-|   DisplayQuality   |    4     |     4     |
-|    Search esri     |    4     |     4     |
-|     Search WFS     |    4     |     4     |
+### Project and component documentation
 
-# Getting started
+- Content tree API: [CONTENT_TREE](documentation/CONTENT_TREE.md)
+- Window manager API: [WINDOWS](documentation/WINDOWS.md)
+- Navbar, ButtonManager, and ToolboxManager: [BUTTONS](documentation/BUTTONS.md) and [TOOLBOX](documentation/TOOLBOX.md)
+- Orientation tools.
+- Action concept: [ACTIONS](documentation/ACTIONS.md)
+- Plugin concept: [Plugin API](https://github.com/virtualcitySYSTEMS/map-plugin-cli)
+- Search API: [SEARCH](documentation/SEARCH.md)
+- I18n API: [INTERNATIONALIZATION](documentation/INTERNATIONALIZATION.md)
+- Categories API: [CATEGORIES](documentation/CATEGORIES.md)
+- Context menu API: [CONTEXT_MENU](documentation/CONTEXT_MENU.md)
+- Feature info: [FEATURE_INFO](documentation/FEATURE_INFO.md)
+- [State and application link](documentation/STATE.md)
+- [Help concept](documentation/HELP.md)
+- Copyright and attributions: [ATTRIBUTIONS](documentation/ATTRIBUTIONS.md)
 
-For a first start, clone the repo and call `npm i` `npm run start` This will start a development server. The
-app can be opened with http://localhost:8080.
+### Release cycle and version management
 
-Further Information see [GET_STARTED](documentation/GET_STARTED.md) and [Plugin-cli](https://github.com/virtualcitySYSTEMS/map-plugin-cli).
+- **Major releases:** Planned approximately annually and may include breaking changes. Major releases also incorporate the latest versions of Cesium and OpenLayers.
+- **Patches and minor releases:** Planned approximately every two months. These may update OpenLayers and, where there are no breaking changes, Cesium.
+- **Plugin compatibility:** Plugins designed for a major version are intended to work with its minor and patch releases.
+- **Bug-fix support:** Provided for the current major version and the preceding major version.
 
-> [API Story Docs](https://lib.virtualcitymap.de/ui/6.0/story/)
+### Roadmap
 
-## Included Dataset
+**Core**
 
-The included datasets for Berlin and Osnabrück in the app configurations in the project can only be used for Development.
-For further usage of the datasets please contact [Virtual City Systems](https://vc.systems).
+- Clustering — priority 4.
+- Style refactoring — priority 4.
+
+**UI**
+
+- Overlay API support.
+
+### Plugins
+
+The following public repositories in the [virtualcitySYSTEMS GitHub organization](https://github.com/virtualcitySYSTEMS) identify themselves as VC Map plugins. This list includes general-purpose and project-specific plugins; it does not indicate release status or maintenance level.
+
+#### Map tools and navigation
+
+- [Clipping Tool](https://github.com/virtualcitySYSTEMS/map-clipping-tool)
+- [Create Link](https://github.com/virtualcitySYSTEMS/map-create-link)
+- [Drawing](https://github.com/virtualcitySYSTEMS/map-draw)
+- [Dynamic Layer](https://github.com/virtualcitySYSTEMS/map-dynamic-layer)
+- [Event Control](https://github.com/virtualcitySYSTEMS/map-event-control)
+- [Gamepad](https://github.com/virtualcitySYSTEMS/map-gamepad)
+- [Geofence](https://github.com/virtualcitySYSTEMS/map-geofence)
+- [Layer Settings](https://github.com/virtualcitySYSTEMS/map-layer-settings)
+- [Layer Slider](https://github.com/virtualcitySYSTEMS/map-layer-slider)
+- [Link Button](https://github.com/virtualcitySYSTEMS/map-link-button)
+- [List View](https://github.com/virtualcitySYSTEMS/map-list-view)
+- [Module Selector](https://github.com/virtualcitySYSTEMS/map-module-selector)
+- [MultiView](https://github.com/virtualcitySYSTEMS/map-multi-view)
+- [Panorama](https://github.com/virtualcitySYSTEMS/map-panorama)
+- [Swipe Tool](https://github.com/virtualcitySYSTEMS/map-swipe-tool)
+- [Walk Mode](https://github.com/virtualcitySYSTEMS/map-walk)
+
+#### Analysis, visualization, and export
+
+- [Cesium Filters](https://github.com/virtualcitySYSTEMS/map-cesium-filters)
+- [Cesium Inspector](https://github.com/virtualcitySYSTEMS/map-cesium-inspector)
+- [Export](https://github.com/virtualcitySYSTEMS/map-export)
+- [Flight](https://github.com/virtualcitySYSTEMS/map-flight)
+- [Height Profile](https://github.com/virtualcitySYSTEMS/map-heightprofile)
+- [Line of Sight](https://github.com/virtualcitySYSTEMS/map-line-of-sight)
+- [Measurement](https://github.com/virtualcitySYSTEMS/map-measurement)
+- [Print](https://github.com/virtualcitySYSTEMS/map-print)
+- [Shadow](https://github.com/virtualcitySYSTEMS/map-shadow)
+- [Solar Balloon](https://github.com/virtualcitySYSTEMS/map-solar-balloon)
+- [Solar Revenue](https://github.com/virtualcitySYSTEMS/map-solar-revenue)
+- [Transparent Terrain](https://github.com/virtualcitySYSTEMS/map-transparent-terrain)
+- [Viewshed](https://github.com/virtualcitySYSTEMS/map-viewshed)
+
+#### Search, data, and domain plugins
+
+- [Handwerker App](https://github.com/virtualcitySYSTEMS/map-handwerker-app)
+- [KnowUrHeat](https://github.com/virtualcitySYSTEMS/map-knowurheat)
+- [Search Coordinate](https://github.com/virtualcitySYSTEMS/map-search-coordinate)
+- [Search Düsseldorf](https://github.com/virtualcitySYSTEMS/map-search-duesseldorf)
+- [Search Esri](https://github.com/virtualcitySYSTEMS/map-search-esri)
+- [Search Nominatim](https://github.com/virtualcitySYSTEMS/map-search-nominatim)
+- [Search WFS](https://github.com/virtualcitySYSTEMS/map-search-wfs)
+- [SensorThings](https://github.com/virtualcitySYSTEMS/map-sensorthings)
+- [XPlan](https://github.com/virtualcitySYSTEMS/map-xplan)
+
+### Included datasets
+
+The datasets for Berlin and Osnabrück included in the project’s application configurations are for development use only. Contact [Virtual City Systems](https://vc.systems) for information about other uses.
